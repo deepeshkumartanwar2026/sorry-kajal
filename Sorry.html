@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Kajal ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;height:100%}
+body{overflow:hidden;font-family:Georgia,serif}
+button,input{font-family:inherit}
+
+/* ================= PAGE 1 ================= */
+
+#page1{
+    position:fixed;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:radial-gradient(circle,#591a32,#280913 58%,#050105);
+    color:#fff;
+}
+.card{
+    width:88%;
+    max-width:380px;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:25px;
+    background:#ffffff14;
+    border:1px solid #ffffff38;
+    box-shadow:0 20px 60px #0009;
+}
+.lockHeart{
+    font-size:52px;
+    animation:beat 1.3s infinite;
+}
+.locked{margin-top:15px;font-size:30px;font-style:italic;line-height:1.3}
+.only{margin:12px 0 25px;font-size:14px;opacity:.7}
+#nameInput{
+    display:block;width:100%;height:52px;padding:14px 20px;
+    border-radius:30px;border:1px solid #ff5c91;
+    background:#0006;color:#fff;text-align:center;
+    font:16px Arial;outline:none;
+}
+#nameInput::placeholder{color:#c9aab5;opacity:1}
+.unlock{
+    display:block;width:100%;height:52px;margin-top:17px;
+    border:0;border-radius:30px;
+    background:linear-gradient(90deg,#ff4f88,#e93670);
+    color:#fff;font-size:15px;font-weight:bold;letter-spacing:2px;
+}
+#error{display:none;margin-top:14px;color:#ff9eb5;font:14px Arial}
+
+/* ================= PAGE 2 ================= */
+
+#page2{
+    display:none;position:fixed;inset:0;overflow:hidden;color:#fff;
+    background:
+      radial-gradient(circle at 15% 15%,#7b3155 0%,transparent 30%),
+      radial-gradient(circle at 85% 25%,#5f2344 0%,transparent 30%),
+      linear-gradient(135deg,#230610,#57152f 52%,#090209);
+}
+#page2:before{
+    content:"♡   ✦   ♥   ✧   ♡   ✦   ♥";
+    position:absolute;top:4%;left:0;width:100%;
+    text-align:center;font-size:25px;letter-spacing:9px;
+    color:#ffd4e2aa;animation:float 4s ease-in-out infinite;
+}
+#typing{
+    position:absolute;top:8%;left:5%;width:90%;max-height:78%;
+    overflow-y:auto;text-align:left;padding:23px 20px;
+    white-space:pre-line;font-size:19px;line-height:1.65;
+    color:#fff7fb;text-shadow:0 0 15px #ff668e;
+    background:#ffffff12;border:1px solid #ffffff30;
+    border-radius:24px;box-shadow:0 15px 50px #0006;
+    backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+}
+#flowers{display:none;position:absolute;inset:0}
+.flower{position:absolute;bottom:-100px;font-size:46px;animation:rise 4s ease-out forwards}
+.f1{left:4%}.f2{left:20%;animation-delay:.3s}.f3{left:37%;animation-delay:.6s}
+.f4{left:54%;animation-delay:.2s}.f5{left:71%;animation-delay:.8s}.f6{left:88%;animation-delay:.5s}
+#sorryWords{display:none;position:absolute;inset:0}
+.sorry{
+    position:absolute;color:#ffb7ca;font-size:20px;font-weight:bold;
+    text-shadow:0 0 12px #ff477d;animation:float 3s ease-in-out infinite;
+}
+.s1{left:7%;top:14%}.s2{right:7%;top:21%;animation-delay:.5s}
+.s3{left:28%;top:33%;animation-delay:1s}.s4{right:15%;top:46%;animation-delay:1.5s}
+.s5{left:7%;top:60%;animation-delay:2s}.s6{right:8%;top:70%;animation-delay:.8s}
+#next2{
+    display:none;position:absolute;left:50%;bottom:7%;transform:translateX(-50%);
+    padding:17px 65px;border:0;border-radius:32px;
+    background:linear-gradient(90deg,#ff4f88,#e93670);
+    color:#fff;font-size:18px;font-weight:bold;letter-spacing:2px;
+}
+
+/* ================= PAGE 3 ================= */
+
+#page3{
+    display:none;position:fixed;inset:0;overflow-y:auto;
+    background:linear-gradient(135deg,#3c2a1d,#130907);
+    padding:30px 0 40px;color:#30231b;
+}
+.paper{
+    width:90%;max-width:600px;margin:auto;padding:35px 25px;
+    background:linear-gradient(135deg,#e3cba5,#cdb48d);
+    box-shadow:0 15px 55px #000b;text-align:center;line-height:1.75;
+}
+.paper h2{margin-top:0;font:31px cursive;color:#71333d}
+.paper p{font-size:16px;margin:18px 0}
+.divider{margin:20px 0;color:#70452e;font-size:18px}
+.final{margin-top:25px;font:24px/1.65 cursive}
+#next3{
+    display:block;margin:25px auto 10px;padding:16px 65px;border:0;border-radius:30px;
+    background:#8c5639;color:#fff;font-size:17px;font-weight:bold;
+}
+
+/* ================= PAGE 4 — CUTE WHITE TEDDY ================= */
+
+#page4{
+    display:none;position:fixed;inset:0;overflow:hidden;color:#fff;
+    background:radial-gradient(circle at 50% 30%,#ffeaf2,#ffc5d8 30%,#9b3e63 65%,#260914);
+}
+.teddyTitle{
+    position:absolute;top:5%;width:100%;text-align:center;
+    font-size:29px;font-weight:bold;color:#fff;text-shadow:0 0 20px #ff477d;z-index:20;
+}
+.teddy{
+    position:absolute;left:50%;top:53%;width:290px;height:390px;
+    transform:translate(-50%,-50%);animation:teddyBreath 3s ease-in-out infinite;z-index:5;
+}
+.ear{
+    position:absolute;top:18px;width:88px;height:88px;border-radius:50%;
+    background:radial-gradient(circle at 30% 25%,#fff,#f6f6f6 58%,#d1d1d1);
+    box-shadow:0 7px 14px #0002,inset -8px -8px 15px #0002;z-index:1;
+}
+.earL{left:20px}.earR{right:20px}
+.innerEar{
+    position:absolute;left:17px;top:17px;width:54px;height:54px;border-radius:50%;
+    background:radial-gradient(circle,#ffb8cb,#f28da9);box-shadow:inset 0 4px 8px #0002;
+}
+.head{
+    position:absolute;top:27px;left:42px;width:206px;height:181px;
+    border-radius:48% 48% 46% 46%;
+    background:radial-gradient(circle at 31% 19%,#fff 0%,#fff 28%,#f7f7f7 62%,#d8d8d8 100%);
+    box-shadow:0 13px 25px #0003,inset 8px 7px 15px #fffB,inset -10px -12px 18px #0002;
+    z-index:3;animation:headMove 4.5s ease-in-out infinite;
+}
+.facePatch{
+    position:absolute;left:50%;top:78px;width:105px;height:73px;transform:translateX(-50%);
+    border-radius:50%;background:radial-gradient(circle at 45% 25%,#fff,#eee);opacity:.9;
+}
+.brow{position:absolute;top:57px;width:36px;height:7px;border-radius:10px;background:#80626a;z-index:5}
+.browL{left:40px;transform:rotate(15deg)}.browR{right:40px;transform:rotate(-15deg)}
+.eye{
+    position:absolute;top:70px;width:22px;height:27px;border-radius:50%;
+    background:radial-gradient(circle at 35% 22%,#fff 0 16%,#3c2930 18%,#20151a 72%);
+    box-shadow:0 2px 4px #0004;z-index:6;
+}
+.eyeL{left:43px}.eyeR{right:43px}
+.blush{
+    position:absolute;top:101px;width:38px;height:18px;border-radius:50%;
+    background:#ff749955;filter:blur(3px);z-index:5;
+}
+.blushL{left:16px}.blushR{right:16px}
+.tear{
+    position:absolute;top:95px;width:10px;height:31px;border-radius:70% 70% 65% 65%;
+    background:linear-gradient(#a7eaff,#31b7ee);box-shadow:0 2px 6px #14a0dc55;
+    z-index:8;animation:tearDrop 2s ease-in infinite;
+}
+.tearL{left:49px}.tearR{right:49px;animation-delay:.8s}
+.nose{
+    position:absolute;top:104px;left:50%;transform:translateX(-50%);
+    width:25px;height:18px;border-radius:50% 50% 55% 55%;
+    background:radial-gradient(circle at 35% 25%,#9b7180,#633f4b);z-index:8;
+}
+.mouth{
+    position:absolute;top:120px;left:50%;width:48px;height:27px;transform:translateX(-50%);
+    border-bottom:5px solid #704956;border-radius:0 0 55% 55%;z-index:8;
+}
+.body{
+    position:absolute;top:190px;left:61px;width:168px;height:145px;
+    border-radius:48% 48% 40% 40%;
+    background:radial-gradient(circle at 31% 18%,#fff,#f8f8f8 48%,#dedede 100%);
+    box-shadow:0 15px 27px #0003,inset 8px 6px 13px #fffB,inset -10px -12px 18px #0002;z-index:2;
+}
+.bellyPatch{
+    position:absolute;left:50%;top:24px;width:116px;height:105px;transform:translateX(-50%);
+    border-radius:50%;background:radial-gradient(circle at 35% 25%,#fff,#eee);
+}
+.bellyHeart{position:absolute;left:50%;top:42px;transform:translateX(-50%);font-size:48px;
+    filter:drop-shadow(0 5px 7px #ff326633);animation:heartPulse 1.5s ease-in-out infinite;z-index:5}
+.arm{
+    position:absolute;top:202px;width:62px;height:116px;border-radius:50px;
+    background:linear-gradient(145deg,#fff,#eee 60%,#d2d2d2);box-shadow:0 9px 16px #0002;z-index:4;
+}
+.armL{left:28px;transform:rotate(20deg);animation:armLeftMove 3.3s ease-in-out infinite}
+.armR{right:28px;transform:rotate(-20deg);animation:armRightMove 3.3s ease-in-out infinite}
+.leg{
+    position:absolute;top:302px;width:83px;height:88px;border-radius:45% 45% 48% 48%;
+    background:radial-gradient(circle at 32% 20%,#fff,#eee 62%,#cfcfcf);
+    box-shadow:0 10px 18px #0003;z-index:1;
+}
+.legL{left:57px;transform:rotate(8deg);animation:legLeftMove 3.5s ease-in-out infinite}
+.legR{right:57px;transform:rotate(-8deg);animation:legRightMove 3.5s ease-in-out infinite}
+.leg:after{
+    content:"";position:absolute;left:50%;bottom:13px;width:54px;height:36px;transform:translateX(-50%);
+    border-radius:50%;background:radial-gradient(circle,#f8a8bb,#f18ca6);opacity:.72;
+}
+.bubble{
+    position:absolute;padding:10px 15px;border-radius:22px;background:#fffffff2;color:#8b3c59;
+    font:13px Arial;font-weight:bold;box-shadow:0 7px 20px #0003;z-index:15;
+    animation:bubbleFloat 3s ease-in-out infinite;
+}
+.bubble:after{
+    content:"";position:absolute;bottom:-8px;left:22px;
+    border-left:8px solid transparent;border-right:8px solid transparent;border-top:9px solid #fff;
+}
+.b1{left:3%;top:29%}.b2{right:3%;top:41%;animation-delay:1s}.b3{left:7%;top:64%;animation-delay:2s}
+#nextTeddy{
+    position:absolute;left:50%;bottom:4%;transform:translateX(-50%);
+    padding:15px 58px;border:0;border-radius:30px;
+    background:linear-gradient(90deg,#ff4f88,#e93670);color:#fff;font-size:17px;font-weight:bold;
+    letter-spacing:1px;box-shadow:0 8px 28px #ff326666;z-index:30;
+}
+
+/* ================= PAGE 5 ================= */
+
+#page5{
+    display:none;position:fixed;inset:0;overflow:hidden;text-align:center;color:#fff;
+    background:radial-gradient(circle at 50% 40%,#ffb6ce,#ef477c 48%,#7c163f);
+}
+#page5:before,#page5:after{
+    content:"♥  ♡  ♥  ♡  ♥";position:absolute;left:0;width:100%;
+    font-size:30px;letter-spacing:18px;color:#ffffff59;animation:float 4s ease-in-out infinite;
+}
+#page5:before{top:9%}#page5:after{bottom:10%;animation-delay:1s}
+.question{position:absolute;top:30%;left:5%;width:90%;font-size:34px;font-weight:bold;line-height:1.25;text-shadow:0 4px 18px #50001e59}
+.subtext{position:absolute;top:44%;left:5%;width:90%;font-size:17px}
+.answerButtons{position:absolute;top:55%;left:0;width:100%;display:flex;justify-content:center;gap:20px;align-items:center}
+.answerButtons button{
+    min-width:120px;padding:16px 22px;border:0;border-radius:30px;font-size:17px;font-weight:bold;
+    box-shadow:0 8px 25px #5a002366;
+}
+#yesBtn{background:#fff;color:#d92f68}
+#noBtn{background:#8b1948;color:#fff;z-index:50}
+
+/* ================= PAGE 6 ================= */
+
+#page6{
+    display:none;position:fixed;inset:0;overflow:hidden;align-items:center;justify-content:center;
+    flex-direction:column;text-align:center;padding:25px;color:#fff;
+    background:radial-gradient(circle at 50% 30%,#ffd6e5,#ff8fb4 30%,#d8326b 65%,#641333);
+}
+#page6:before,#page6:after{
+    content:"♥   ♡   ♥   ✦   ♡   ♥   ♡";position:absolute;left:0;width:100%;
+    text-align:center;font-size:27px;letter-spacing:12px;color:#ffffff80;animation:float 4s ease-in-out infinite;
+}
+#page6:before{top:8%}#page6:after{bottom:9%;animation-delay:1s}
+.finalHeart{font-size:90px;margin-bottom:10px;animation:beat 1.3s ease-in-out infinite;z-index:5}
+#page6 h1{margin:5px 0 18px;font-size:40px;text-shadow:0 0 20px #ffffffa6;z-index:5}
+#page6 p{max-width:520px;margin:0;font-size:19px;line-height:1.7;z-index:5}
+.finalSmall{margin-top:20px;font-size:15px;opacity:.85;z-index:5}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes rise{0%{bottom:-100px;opacity:0;transform:scale(.5)}30%{opacity:1}100%{bottom:20px;opacity:1;transform:scale(1)}}
+@keyframes float{0%,100%{transform:translateY(10px);opacity:.55}50%{transform:translateY(-15px);opacity:1}}
+@keyframes teddyBreath{0%,100%{transform:translate(-50%,-50%) translateY(0) scale(1)}50%{transform:translate(-50%,-50%) translateY(5px) scale(1.015)}}
+@keyframes headMove{0%,100%{transform:rotate(0)}50%{transform:rotate(-2deg) translateY(2px)}}
+@keyframes tearDrop{0%{opacity:0;transform:translateY(0) scale(.8)}25%{opacity:1}100%{opacity:0;transform:translateY(36px) scale(1)}}
+@keyframes heartPulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.12)}}
+@keyframes armLeftMove{0%,100%{transform:rotate(20deg) translate(0,0)}50%{transform:rotate(13deg) translate(2px,-5px)}}
+@keyframes armRightMove{0%,100%{transform:rotate(-20deg) translate(0,0)}50%{transform:rotate(-13deg) translate(-2px,-5px)}}
+@keyframes legLeftMove{0%,100%{transform:rotate(8deg) translateY(0)}50%{transform:rotate(4deg) translateY(-3px)}}
+@keyframes legRightMove{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-4deg) translateY(-3px)}}
+@keyframes bubbleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+@media(max-width:480px){
+    #typing{font-size:17px;line-height:1.55;padding:20px 16px;top:8%;max-height:78%}
+    .question{font-size:29px}
+    .teddy{transform:translate(-50%,-50%) scale(.82);transform-origin:center}
+    .bubble{font-size:11px;padding:8px 11px}
+    .paper{width:92%;padding:28px 20px}
+    .paper h2{font-size:28px}
+    #page6 h1{font-size:32px}
+    #page6 p{font-size:17px}
+}
+@media(max-height:700px){
+    .teddy{top:53%;transform:translate(-50%,-50%) scale(.70)}
+    .b1{top:23%}.b2{top:33%}.b3{top:62%}
+    #nextTeddy{bottom:2%}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1">
+    <div class="card">
+        <div class="lockHeart">❤️</div>
+        <div class="locked">This Garden Is Locked</div>
+        <div class="only">Only one person holds the key</div>
+        <input id="nameInput" type="text" placeholder="Enter your name" autocomplete="off">
+        <button class="unlock" onclick="unlockGarden()">UNLOCK</button>
+        <div id="error">Hmm... wrong key 🥺</div>
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2">
+    <div id="typing"></div>
+
+    <div id="flowers">
+        <div class="flower f1">🌷</div>
+        <div class="flower f2">🌸</div>
+        <div class="flower f3">🌹</div>
+        <div class="flower f4">🌷</div>
+        <div class="flower f5">🌸</div>
+        <div class="flower f6">🌹</div>
+    </div>
+
+    <div id="sorryWords">
+        <div class="sorry s1">Sorry 🥺</div>
+        <div class="sorry s2">Sorry ❤️</div>
+        <div class="sorry s3">Sorry 🥹</div>
+        <div class="sorry s4">Sorry 😔</div>
+        <div class="sorry s5">Sorry 🥺</div>
+        <div class="sorry s6">Sorry ❤️</div>
+    </div>
+
+    <button id="next2" onclick="openPoetry()">NEXT →</button>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3">
+    <div class="paper">
+        <h2>Sorry Kajal 🥺❤️</h2>
+        <div class="divider">──── ♥ ────</div>
+
+        <p>
+            Whenever happiness finds its way to me,
+            <br>
+            something suddenly falls apart—
+            <br>
+            as if joy was never meant to stay.
+        </p>
+
+        <div class="divider">──── ❧ ────</div>
+
+        <p>
+            And in those moments, I remember...
+            <br>
+            perhaps I am living beneath the shadow
+            <br>
+            of a curse I once earned.
+        </p>
+
+        <div class="divider">──── ❧ ────</div>
+
+        <p>
+            For I have hurt an innocent heart,
+            <br>
+            made those delicate eyes
+            <br>
+            weep tears they never deserved.
+        </p>
+
+        <div class="divider">──── ❧ ────</div>
+
+        <p>
+            I made that smiling face
+            <br>
+            carry a sadness it never asked for.
+        </p>
+
+        <div class="divider">──── ❧ ────</div>
+
+        <p>
+            Maybe this is my punishment—
+            <br>
+            to have my happiness interrupted
+            <br>
+            just when I begin to feel it.
+        </p>
+
+        <p>
+            Because somewhere along the way,
+            <br>
+            I became the reason
+            <br>
+            someone innocent had to hurt.
+        </p>
+
+        <div class="divider">──── ♥ ────</div>
+
+        <div class="final">
+            I am truly sorry.
+            <br>
+            I am ashamed of my mistakes.
+            <br>
+            Please forgive me.
+            <br>
+            All the mistakes were mine.
+            <br><br>
+            🥺❤️
+        </div>
+    </div>
+
+    <button id="next3" onclick="openTeddy()">NEXT →</button>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4">
+
+    <div class="teddyTitle">I'm Really Sorry 🥺❤️</div>
+
+    <div class="teddy">
+
+        <div class="ear earL">
+            <div class="innerEar"></div>
+        </div>
+
+        <div class="ear earR">
+            <div class="innerEar"></div>
+        </div>
+
+        <div class="head">
+            <div class="facePatch"></div>
+            <div class="brow browL"></div>
+            <div class="brow browR"></div>
+            <div class="eye eyeL"></div>
+            <div class="eye eyeR"></div>
+            <div class="blush blushL"></div>
+            <div class="blush blushR"></div>
+            <div class="tear tearL"></div>
+            <div class="tear tearR"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+
+        <div class="body">
+            <div class="bellyPatch"></div>
+            <div class="bellyHeart">❤️</div>
+        </div>
+
+        <div class="arm armL"></div>
+        <div class="arm armR"></div>
+        <div class="leg legL"></div>
+        <div class="leg legR"></div>
+
+    </div>
+
+    <div class="bubble b1">Sorry Kajal 🥺</div>
+    <div class="bubble b2">Please forgive me 😭</div>
+    <div class="bubble b3">I'm really sorry 🥹</div>
+
+    <button id="nextTeddy" onclick="openFinalQuestion()">NEXT ❤️</button>
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5">
+
+    <div class="question">TUMNE MUJHE MAAF KIYA?</div>
+
+    <div class="subtext">🥺❤️ Sach sach batana...</div>
+
+    <div class="answerButtons">
+        <button id="yesBtn" onclick="yesClicked()">YES ❤️</button>
+        <button id="noBtn">NO 😭</button>
+    </div>
+
+</div>
+
+<!-- PAGE 6 -->
+<div id="page6">
+
+    <div class="finalHeart">❤️</div>
+
+    <h1>THANK YOU! 🥹❤️</h1>
+
+    <p>
+        I promise I'll try my best
+        <br>
+        to never hurt you again. 🫶
+    </p>
+
+    <div class="finalSmall">
+        Our friendship means a lot to me, Kajal. ❤️
+    </div>
+
+</div>
+
+<script>
+
+/* PAGE 1 → PAGE 2 */
+
+function unlockGarden(){
+
+    var name =
+    document.getElementById("nameInput")
+    .value
+    .trim()
+    .toLowerCase();
+
+    if(name === "kajal"){
+
+        document.getElementById("page1").style.display="none";
+        document.getElementById("page2").style.display="block";
+
+        startTyping();
+
+    }else{
+
+        document.getElementById("error").style.display="block";
+
+    }
+}
+
+
+/* PAGE 2 TYPEWRITER */
+
+function startTyping(){
+
+    var message =
+`My Dear Friend Kajal ❤️🥹
+
+Yaar, mujhe pata hai ki maine hi tujhse khud ko block karne ke liye kaha tha, lekin ab tere bina bahut bore ho gaya hoon. 🥺❤️
+
+Delhi mein bhi tere jaisa mera koi achha dost nahi hai, jisse main apni har baat share kar sakun. Teri kami sach mein mehsoos ho rahi hai.
+
+Mujhe apni galti ka ehsaas hai aur main dil se sorry bolna chahta hoon. Tu meri ek achhi aur khaas dost hai aur main hamari dosti khona nahi chahta.
+
+Ho sake toh mujhe maaf kar dena. 🥹❤️
+
+I am really sorry, yaar. 🫂❤️`;
+
+    var box=document.getElementById("typing");
+
+    box.textContent="";
+    box.style.display="block";
+
+    var i=0;
+
+    function writeText(){
+
+        if(i < message.length){
+
+            box.textContent += message.charAt(i);
+
+            i++;
+
+            setTimeout(writeText,35);
+
+        }else{
+
+            setTimeout(function(){
+
+                box.style.display="none";
+
+                document.getElementById("flowers").style.display="block";
+                document.getElementById("sorryWords").style.display="block";
+
+                setTimeout(function(){
+
+                    document.getElementById("next2").style.display="block";
+
+                },2000);
+
+            },1000);
+
+        }
+    }
+
+    writeText();
+}
+
+
+/* PAGE 2 → PAGE 3 */
+
+function openPoetry(){
+
+    document.getElementById("page2").style.display="none";
+    document.getElementById("page3").style.display="block";
+
+}
+
+
+/* PAGE 3 → PAGE 4 */
+
+function openTeddy(){
+
+    document.getElementById("page3").style.display="none";
+    document.getElementById("page4").style.display="block";
+
+}
+
+
+/* PAGE 4 → PAGE 5 */
+
+function openFinalQuestion(){
+
+    document.getElementById("page4").style.display="none";
+    document.getElementById("page5").style.display="block";
+
+}
+
+
+/* YES → PAGE 6 */
+
+function yesClicked(){
+
+    document.getElementById("page5").style.display="none";
+    document.getElementById("page6").style.display="flex";
+
+}
+
+
+/* NO BUTTON */
+
+var noBtn=document.getElementById("noBtn");
+
+function moveNoButton(){
+
+    var padding=20;
+
+    var maxX =
+    window.innerWidth -
+    noBtn.offsetWidth -
+    padding;
+
+    var maxY =
+    window.innerHeight -
+    noBtn.offsetHeight -
+    padding;
+
+    var x =
+    Math.random() *
+    (maxX-padding) +
+    padding;
+
+    var y =
+    Math.random() *
+    (maxY-padding) +
+    padding;
+
+    noBtn.style.position="fixed";
+    noBtn.style.left=x+"px";
+    noBtn.style.top=y+"px";
+    noBtn.style.transform="none";
+}
+
+noBtn.addEventListener("mouseenter",moveNoButton);
+
+noBtn.addEventListener("touchstart",function(event){
+
+    event.preventDefault();
+    moveNoButton();
+
+});
+
+noBtn.addEventListener("click",function(event){
+
+    event.preventDefault();
+    moveNoButton();
+
+});
+
+
+/* ENTER KEY */
+
+document.getElementById("nameInput")
+.addEventListener("keydown",function(event){
+
+    if(event.key==="Enter"){
+        unlockGarden();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
